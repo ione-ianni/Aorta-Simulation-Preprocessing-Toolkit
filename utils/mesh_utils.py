@@ -16,6 +16,9 @@ from scipy.signal import savgol_filter
 from scipy.interpolate import splev, splder, splrep
 import SimpleITK as sitk
 import meshio
+import pyvista as pv
+import vtk
+import numpy as np
 
 def meshfix(mesh):
     meshfix = mf.MeshFix(pv.PolyData(mesh))
