@@ -9,7 +9,6 @@ from pymeshfix._meshfix import PyTMesh
 from vtkmodules.util.numpy_support import vtk_to_numpy, numpy_to_vtk
 import vmtk_utils as vmtkut
 from pyFM.mesh import TriMesh
-from vtk_utils import *
 import pyacvd
 import time
 from scipy.signal import savgol_filter
@@ -19,6 +18,40 @@ import meshio
 import pyvista as pv
 import vtk
 import numpy as np
+
+def write_polydata(polydata, filename):
+    if '.vtk' in filename:
+        writer = vtk.vtkPolyDataWriter()
+    elif '.vtp' in filename:
+        writer = vtk.vtkXMLPolyDataWriter()
+    elif '.stl' in filename:
+        writer = vtk.vtkSTLWriter()
+    elif '.ply' in filename:
+        writer = vtk.vtkPLYWriter()
+    writer.SetInputData(polydata)
+    writer.SetFileName(filename)
+    writer.Update()
+    writer.Write()
+
+
+def write_polydata_to_off(pd, fn):
+    cells = np.reshape(pd.faces, (-1, 4))
+
+    with open(fn, 'w') as fw:
+        fw.write('OFF\n')
+        fw.write(f'{pd.n_points} {pd.n_faces} 0\n')
+        for i in range(pd.n_points):
+            for j in range(3):
+                fw.write(str(pd.points[i][j]))
+                fw.write(' ')
+            fw.write('\n')
+        for i in range(pd.n_faces):
+            for j in range(4):
+                fw.write(str(cells[i][j]))
+                fw.write(' ')
+            fw.write('\n')
+
+
 
 def meshfix(mesh):
     meshfix = mf.MeshFix(pv.PolyData(mesh))
