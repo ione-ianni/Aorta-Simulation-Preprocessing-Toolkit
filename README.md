@@ -19,8 +19,9 @@ From Case Studies to Cohort of Patients: Automating FSI Simulations to Uncover D
 Annals of Biomedical Engineering.
 https://doi.org/10.1007/s10439-026-04313-4
 
-BibTeX
+### BibTeX
 
+```bibtex
 @article{Ianniruberto2026FSI,
   author  = {Ianniruberto, Ione and Astori, Davide and Saitta, Simone and
              Milesi, Davide and Villar Calle, Pablo and Gaudino, Mario and
@@ -32,6 +33,7 @@ BibTeX
   doi     = {10.1007/s10439-026-04313-4},
   url     = {https://doi.org/10.1007/s10439-026-04313-4}
 }
+```
 
 ## Code overview
 
