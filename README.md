@@ -12,9 +12,26 @@ A `utils/` folder contains shared functions used across scripts, and `env.yml` p
 
 ---
 ## Citation (required)
+If you use this repository in your academic work, please cite the following article:
 
-If you use this repository in academic work, please cite:
+Ianniruberto, I., Astori, D., Saitta, S., Milesi, D., Villar Calle, P., Gaudino, M., Girardi, L. N., Humphrey, J. D., Weinsaft, J. W., Votta, E., & Redaelli, A. (2026).
+From Case Studies to Cohort of Patients: Automating FSI Simulations to Uncover Downstream Effects of Ascending Aortic Grafts.
+Annals of Biomedical Engineering.
+https://doi.org/10.1007/s10439-026-04313-4
 
+BibTeX
+
+@article{Ianniruberto2026FSI,
+  author  = {Ianniruberto, Ione and Astori, Davide and Saitta, Simone and
+             Milesi, Davide and Villar Calle, Pablo and Gaudino, Mario and
+             Girardi, Leonard N. and Humphrey, Jay D. and Weinsaft, Jonathan W. and
+             Votta, Emiliano and Redaelli, Alberto},
+  title   = {From Case Studies to Cohort of Patients: Automating FSI Simulations to Uncover Downstream Effects of Ascending Aortic Grafts},
+  journal = {Annals of Biomedical Engineering},
+  year    = {2026},
+  doi     = {10.1007/s10439-026-04313-4},
+  url     = {https://doi.org/10.1007/s10439-026-04313-4}
+}
 
 ## Code overview
 
